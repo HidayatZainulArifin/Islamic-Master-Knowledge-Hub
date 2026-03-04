@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Master Knowledge Hub | Berbagi Ilmu Sunnah</title>
+    <!-- Favicon (Ikon Tab Browser) -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3524/3524458.png">
+    
+    <style>
+        /* CSS MASTER THEME - ISLAMIC DEVELOPER DARK MODE */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d0d0d;
+            color: #d4d4d4;
+            margin: 0;
+            display: flex;
+            overflow-x: hidden;
+        }
+        
+        /* SIDEBAR NAVIGATION (Gaya Bloxd Hub) */
+        nav {
+            width: 280px;
+            background-color: #1a1a1a;
+            height: 100vh;
+            position: fixed;
+            padding: 20px;
+            border-right: 1px solid #333;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        nav h2 { color: #2ecc71; font-size: 1.2rem; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        nav a {
+            display: block;
+            color: #aaa;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+            transition: 0.2s;
+        }
+        nav a:hover { color: #fff; background: #2d2d2d; }
+        
+        /* SIDEBAR BUTTON COLORS - MENIRU BLOXD */
+        .side-btn { border-left: 4px solid #444; background: #252526; margin-top: 8px; font-weight: bold; }
+        .btn-aqidah { border-color: #2ecc71; } /* Hijau */
+        .btn-ibadah { border-color: #ffca28; } /* Kuning */
+        .btn-akhlak { border-color: #03a9f4; } /* Biru */
+        .btn-sirah { border-color: #bb86fc; }  /* Ungu */
+        .btn-doa { border-color: #ff4444; }    /* Merah */
+
+        /* MAIN CONTENT AREA */
+        main {
+            margin-left: 320px;
+            padding: 40px;
+            width: calc(100% - 320px);
+            max-width: 1200px;
+        }
+
+        /* DASHBOARD GRID HUB */
+        .doc-hub {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .hub-btn {
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            color: white;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .hub-btn span { font-size: 0.7rem; font-weight: normal; opacity: 0.8; }
+        .hub-btn:hover { transform: translateY(-5px); filter: brightness(1.2); box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
+
+        /* HUB COLORS */
+        .bg-aqidah { background: #1b5e20; }
+        .bg-ibadah { background: #947600; }
+        .bg-akhlak { background: #005682; }
+        .bg-sirah { background: #5d3591; }
+        .bg-doa { background: #820000; }
+
+        /* SECTIONS */
+        .section { margin-bottom: 60px; }
+        h2 { color: #2ecc71; border-bottom: 2px solid #333; padding-bottom: 10px; margin-top: 40px; }
+        
+        pre { 
+            background-color: #000; 
+            padding: 20px; 
+            border-radius: 8px; 
+            border-left: 5px solid #2ecc71; 
+            overflow-x: auto; 
+            color: #9cdcfe; 
+            font-size: 0.85rem; 
+            line-height: 1.6;
+            font-family: 'Consolas', monospace;
+        }
+        
+        .tag { background: #333; color: #2ecc71; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; margin-right: 5px; }
+
+        .discord-box { 
+            background: #5865F2; color: white; padding: 18px 30px; border-radius: 10px; 
+            text-decoration: none; display: flex; align-items: center; justify-content: center; 
+            gap: 15px; font-weight: bold; margin-top: 15px; transition: 0.3s;
+        }
+        .discord-box:hover { transform: scale(1.02); }
+    </style>
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <nav>
+        <h2>IM Hub Navigation</h2>
+        <a href="#intro">🏠 Dashboard Hub</a>
+        <a href="#master-ref">🚀 Master Reference</a>
+        <a href="#community">💬 Community</a>
+        
+        <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
+        <a href="aqidah.html" class="side-btn btn-aqidah">🟢 Aqidah (Tauhid)</a>
+        <a href="ibadah.html" class="side-btn btn-ibadah">🟡 Ibadah (Sholat)</a>
+        <a href="akhlak.html" class="side-btn btn-akhlak">🔵 Akhlak (Adab)</a>
+        <a href="sirah.html" class="side-btn btn-sirah">👕 Sirah Nabawiyah</a>
+        <a href="doa.html" class="side-btn btn-doa">🔴 Doa & Dzikir</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        
+        <!-- HEADER LUXURY -->
+        <div style="display: flex; align-items: center; gap: 25px; margin-bottom: 40px; background: linear-gradient(135deg, #1e1e1e 0%, #0d0d0d 100%); padding: 30px; border-radius: 15px; border: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
+            <div>
+                <h1 style="margin: 0; color: #2ecc71; font-size: 2.5rem;">
+                    Islamic Master <span style="color: #ffca28;">Knowledge</span> Hub
+                </h1>
+                <p style="margin: 8px 0 0 0; color: #aaa; font-size: 1.1rem;">
+                    "The Ultimate Knowledge Base for Young Muslims"
+                </p>
+                <div style="margin-top: 15px; display: flex; gap: 10px;">
+                    <span class="tag">v2.6 Stable</span>
+                    <span class="tag" style="color: #ffca28;">Verified Knowledge</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="intro" class="section">
+            <p>Selamat datang di Hub Utama Pusat Belajar Islam. Silakan pilih kategori ilmu di bawah ini:</p>
+            
+            <!-- DASHBOARD GRID -->
+            <div class="doc-hub">
+                <a href="aqidah.html" class="hub-btn bg-aqidah">Aqidah Doc<span>Sifat Nabi & Allah</span></a>
+                <a href="ibadah.html" class="hub-btn bg-ibadah">Ibadah Doc<span>Panduan Lengkap Sholat</span></a>
+                <a href="akhlak.html" class="hub-btn bg-akhlak">Akhlak Doc<span>Adab & Etika Muslim</span></a>
+                <a href="sirah.html" class="hub-btn bg-sirah">Sirah Doc<span>Kisah Nabi Muhammad SAW</span></a>
+                <a href="doa.html" class="hub-btn bg-doa">Doa Snippets<span>Kumpulan Doa Harian</span></a>
+            </div>
+        </section>
+
+        <!-- MASTER REFERENCE (GAYA API) -->
+        <section id="master-ref" class="section">
+            <h2>🚀 Master Reference: Sifat Nabi Muhammad SAW</h2>
+            <p>Penjelasan ringkas tentang 3 Kategori Sifat yang dimiliki para Nabi:</p>
+            
+            <pre>
+/* 1. Sifat Wajib (Must Have) */
+Nabi.sifatWajib = {
+    siddiq: "Selalu Benar/Jujur",
+    amanah: "Sangat Terpercaya",
+    tabligh: "Menyampaikan Wahyu",
+    fathonah: "Sangat Cerdas"
+};
+
+/* 2. Sifat Mustahil (Impossible) */
+Nabi.sifatMustahil = {
+    kizib: "Berbohong",
+    khianat: "Berkhianat",
+    kitman: "Menyembunyikan",
+    baladah: "Bodoh"
+};
+
+/* 3. Sifat Jaiz (Humanly) */
+Nabi.sifatJaiz = "Aradhul Basyariyah (Sifat Kemanusiaan Biasa)";
+// Contoh: Makan, Minum, Sakit, Tidur, dan Menikah.</pre>
+        </section>
+
+        <!-- WISDOM SNIPPET -->
+        <section class="section">
+            <h2>💡 Wisdom Snippet</h2>
+            <p>Gunakan dalil ini sebagai dasar utama identitas Nabi:</p>
+            <pre>
+/* QS. Al-Kahf Ayat 110 (Juz 16) */
+"Katakanlah (Muhammad): Sesungguhnya aku ini hanyalah seorang MANUSIA SEPERTI KAMU, 
+yang diwahyukan kepadaku bahwa Tuhan kamu adalah Tuhan Yang Maha Esa..."</pre>
+        </section>
+
+        <!-- COMMUNITY SECTION -->
+        <section id="community" class="section">
+            <h2>Community Resources</h2>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <a href="https://www.belajar-islam.net" class="discord-box" style="background: #2ecc71;" target="_blank">
+                    📖 Kunjungi Belajar-Islam.net
+                </a>
+                <p style="font-size: 0.8rem; text-align: center; color: #555;">Dibuat dengan semangat oleh Dek Hidayat untuk masa depan umat.</p>
+            </div>
+        </section>
+
+        <footer style="margin-top: 100px; border-top: 1px solid #333; padding-top: 20px; font-size: 0.8rem; color: #555; text-align: center;">
+            Islamic Master Hub &copy; 2026 | Developed by @HidayatZainulArifin | Supported by Ustadz Fraze
+        </footer>
+    </main>
+
+</body>
+</html>
