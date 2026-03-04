@@ -42,4 +42,4 @@ Seluruh materi di website ini dirangkum dan disadur dari sumber terpercaya:
 Semoga website ini bermanfaat bagi siapa saja yang membacanya. Jangan ragu untuk memberikan saran!
 
 ---
-**Islamic Master Hub** © 2024 oleh Hidayat Zainul Arifin.
+**Islamic Master Hub** © 2026 oleh Hidayat Zainul Arifin.
